@@ -5,4 +5,8 @@ touch tokens.ini
 echo "[Config]" >> tokens.ini
 echo "key=$1" >> tokens.ini
 pip3 install -r requirements.txt
-alias abuseipdb="python3 ~/AbuseIPDB/python.py"
+cd
+echo 'alias abuseipdb="python3 ~/AbuseIPDB/python.py"' >> .bashrc
+bash
+clear
+echo "Setup done."
