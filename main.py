@@ -15,7 +15,7 @@ querystring = {
 }
 
 config = configparser.ConfigParser()
-config.read('~/tokens.ini')
+config.read('tokens.ini')
 key = config["Config"]['key']
 
 headers = {
