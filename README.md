@@ -17,4 +17,4 @@ bash setup.sh YOUR_API_KEY_HERE
 
 (replace YOUR_API_KEY_HERE with your API key)
 
-Run the script with `abuseipdb IP`.
+Run the script with `python3 main.py IP`.
