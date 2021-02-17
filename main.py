@@ -30,12 +30,15 @@ decodedResponse = json.loads(response.text)
 
 # Use an API to convert the country code to a name
 
-code = decodedResponse["data"]["countryCode"];
-url2 = "https://restcountries.eu/rest/v2/alpha/"+decodedResponse["data"]["countryCode"]
-user = {"user-agent": "AbuseIPDB-CLI (+https://riverside.rocks/projects)"}
-v2 = requests.request(method='GET', url=url2, headers=user)
-pre = json.loads(v2.text)
-country = pre["name"]
+try:
+	code = decodedResponse["data"]["countryCode"];
+	url2 = "https://restcountries.eu/rest/v2/alpha/"+decodedResponse["data"]["countryCode"]
+	user = {"user-agent": "AbuseIPDB-CLI (+https://riverside.rocks/projects)"}
+	v2 = requests.request(method='GET', url=url2, headers=user)
+	pre = json.loads(v2.text)
+	country = pre["name"]
+except:
+	sys.exit(print("Please input a valid IP address!"))
 
 # Final result
 print(ip)
