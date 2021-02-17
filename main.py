@@ -41,7 +41,10 @@ country = pre["name"]
 print(ip)
 print("-----------------------")
 print('ISP: '+decodedResponse["data"]["isp"])
-print('Type: '+decodedResponse["data"]["usageType"])
+try:
+	print('Type: '+decodedResponse["data"]["usageType"])
+except:
+	print('Type: Unknown')
 print('Domain: '+decodedResponse["data"]["domain"])
 print('Country: '+country)
 print('Abuse Confidence: \033[91m'+str(decodedResponse["data"]["abuseConfidenceScore"])+'%\033[0m')
