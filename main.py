@@ -48,7 +48,10 @@ try:
 	print('Type: '+decodedResponse["data"]["usageType"])
 except:
 	print('Type: Unknown')
-print('Domain: '+decodedResponse["data"]["domain"])
+try:
+	print('Domain: '+decodedResponse["data"]["domain"])
+except:
+	print('Domain: Unknown')
 print('Country: '+country)
 print('Abuse Confidence: \033[91m'+str(decodedResponse["data"]["abuseConfidenceScore"])+'%\033[0m')
 print('Total Reports: \033[93m'+str(decodedResponse["data"]["totalReports"]))
