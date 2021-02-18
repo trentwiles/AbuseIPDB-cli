@@ -7,8 +7,14 @@ import configparser
 
 url = 'https://api.abuseipdb.com/api/v2/check'
 
-ip = sys.argv[1]
-
+try:
+	ip = sys.argv[1]
+except:
+	print("------------------");
+	print("AbuseIPDB CLI");
+	print("Usage: abuseipdb [ip address]");
+	print("Example: abuseipdb 1.1.1.1");
+	sys.exit()
 querystring = {
     'ipAddress': ip,
     'maxAgeInDays': '90'
